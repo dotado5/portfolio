@@ -22,7 +22,6 @@ import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import motion from "./tech/framer motion.png";
 import comp from "./tech/styled.png";
@@ -47,6 +46,11 @@ import tronepage from "./trone.jpg";
 import linkedinpage from "./linkedin.jpg";
 import manage from "./manage.jpg";
 import pizzapage from "./pizza.jpg";
+import doyenify from "../assets/doyen1.png";
+import typescript from "./Typescript.png";
+import teslalogo from "./tesla.png";
+import disneyHome from "./disneyCloneHome.png";
+import teslaHome from "./teslaHome.png";
 
 export {
   logo,
@@ -68,7 +72,6 @@ export {
   reactjs,
   redux,
   tailwind,
-  typescript,
   threejs,
   meta,
   shopify,
@@ -95,4 +98,9 @@ export {
   pizzapage,
   linkedinpage,
   manage,
+  doyenify,
+  typescript,
+  teslalogo,
+  disneyHome,
+  teslaHome,
 };

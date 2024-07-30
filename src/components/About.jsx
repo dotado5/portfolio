@@ -46,14 +46,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a react frontend developer and a baby python developer with a degree
-        in Computer Science With Economics (in view), I bring beautiful web
-        designs and interfaces to life and I'm passionate about achieving my
-        goals. I give my all to whatever I do and I try to deliver the very
-        best. I love working with APIs and I enjoy collaborative work, helps me
-        meet new and interesting people. Ohh and I'm a big time football fan.
-        The football club I support is ......, think I'll leave that for when we
-        make contact!!!😆
+        I am a dedicated Fullstack Engineer with a strong background in both
+        frontend and backend development. With extensive experience in
+        technologies such as React, Node.js, MongoDB and firebase. I build
+        scalable, efficient, and user-friendly web applications. My expertise
+        lies in creating seamless integrations between the client-side and
+        server-side, ensuring optimal performance and user experience.
+        Passionate about continuous learning and innovation, I thrive in dynamic
+        environments and enjoy tackling complex challenges.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

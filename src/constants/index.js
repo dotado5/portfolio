@@ -40,6 +40,9 @@ import {
   manage,
   pizzapage,
   tronepage,
+  doyenify,
+  teslaHome,
+  disneyHome,
 } from "../assets";
 
 export const navLinks = [
@@ -59,23 +62,13 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Fullstack Engineer",
     icon: web,
-  },
-  {
-    title: "Project Manager",
-    // icon: mobile,
-    icon: pm1,
   },
   {
     title: "Python Developer",
     // icon: backend,
     icon: python,
-  },
-  {
-    title: "Content Writer",
-    // icon: creator,
-    icon: writing,
   },
 ];
 
@@ -92,10 +85,10 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  // {
-  //   name: "TypeScript",
-  //   icon: typescript,
-  // },
+  {
+    name: "TypeScript",
+    icon: typescript,
+  },
   {
     name: "React JS",
     icon: reactjs,
@@ -108,18 +101,18 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  // {
-  //   name: "Node JS",
-  //   icon: nodejs,
-  // },
-  // {
-  //   name: "MongoDB",
-  //   icon: mongodb,
-  // },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Node JS",
+    icon: nodejs,
   },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
   {
     name: "git",
     icon: git,
@@ -192,19 +185,19 @@ const experiences = [
       "Creation of awareness of different offerings of company's mobile and web applications through content writing.",
     ],
   },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
+  {
+    title: "Full stack Engineer",
+    company_name: "Doyenify",
+    icon: doyenify,
+    iconBg: "#E6DEDD",
+    date: "Sep 2023 - Present",
+    points: [
+      "Developing and maintaining web applications.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
 ];
 
 const testimonials = [
@@ -322,6 +315,35 @@ const projects = [
     webImage: trone,
     git_link: "https://github.com/dotado5/Trone-web",
     live_link: "https://trone-web.vercel.app/",
+  },
+  {
+    name: "Tesla clone",
+    description:
+      "A clone of the website of the world's leading electronic car company.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: teslaHome,
+    webImage: tesla,
+    git_link: "https://github.com/dotado5/tesla-clone.git",
+    live_link: "https://tesla-clone-topaz-six.vercel.app/",
+  },
+  {
+    name: "Disney plus clone",
+    description: "",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: disneyHome,
+    webImage: tesla,
+    git_link: "https://github.com/dotado5/disneyplus-clone.git",
+    live_link: "https://disneyplus-clone-wheat.vercel.app/",
   },
 ];
 
