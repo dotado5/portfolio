@@ -1,11 +1,23 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
 import CanvasLoader from "../Loader";
 
-const Computers = async (isMobile) => {
-  const computer = await useGLTF("./desktop_pc/scene.gltf");
+const Computers = ({ isMobile }) => {
+  const { scene } = useGLTF("./desktop_pc/scene.gltf");
+
+  // Check for NaN values in position attributes
+  scene.traverse((child) => {
+    if (child.isMesh) {
+      const position = child.geometry.attributes.position.array;
+      for (let i = 0; i < position.length; i++) {
+        if (isNaN(position[i])) {
+          console.error("NaN value found in position attribute", child);
+          return;
+        }
+      }
+    }
+  });
 
   return (
     <mesh>
@@ -20,7 +32,7 @@ const Computers = async (isMobile) => {
       />
       <pointLight intensity={1} />
       <primitive
-        object={computer.scene}
+        object={scene}
         scale={isMobile ? 0.7 : 0.75}
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
@@ -31,6 +43,7 @@ const Computers = async (isMobile) => {
 
 const ComputersCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -60,6 +73,7 @@ const ComputersCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
+      // className="md:block hidden"
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
